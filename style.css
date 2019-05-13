@@ -1,4 +1,4 @@
-/* A Free Design by Bryant Smith (bryantsmith.com) */
+
 
 html, body {
 text-align: center;
@@ -9,7 +9,7 @@ body {
 	margin: 0;
 	padding: 0;
 	background: #C1C1C1;
-	background-image:url(background.png)
+	background-image:url(img/background.png)
 	text-align: left;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	font-size: 13px;
@@ -85,7 +85,7 @@ margin-bottom:10px;
 {
 height:85px;
 width:921px;
-background-image:url(main_top.png);
+background-image:url(img/main_top.png);
 background-repeat:no-repeat;
 }
 
@@ -95,7 +95,7 @@ background-repeat:no-repeat;
 padding-left:0px;
 height:auto;
 width:921px;
-background-image:url(main_body.png);
+background-image:url(img/main_body.png);
 background-repeat:repeat-y;
 color:#000000;
 padding-bottom:20px;
@@ -110,7 +110,7 @@ font-size:24px;
 line-height:85px;
 color:#000000;
 padding-left:25px;
-background-image:url(header_h1_bg.png);
+background-image:url(img/header_h1_bg.png);
 background-position:right;
 background-repeat:no-repeat;
 margin-right:25px;
@@ -130,7 +130,7 @@ padding-right:20px;
 {
 height:8px;
 width:921px;
-background-image:url(main_bottom.png);
+background-image:url(img/main_bottom.png);
 background-repeat:no-repeat;
 }
 
@@ -148,7 +148,7 @@ background-repeat:no-repeat;
 
 #header
 {
-background-image:url(header.png);
+background-image:url(img/header.png);
 background-repeat:no-repeat;
 width:921px;
 height:72px;
@@ -160,7 +160,7 @@ height:72px;
 display:block;
 width: 921px;
 height:74px;
-background: url(footer.png) no-repeat;
+background: url(img/footer.png) no-repeat;
 text-align:right;
 font-size:9px;
 line-height:75px;
