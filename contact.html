@@ -10,7 +10,34 @@
 <script language="JavaScript">
 
 function display() {
-alert("Thanks for contacting with us "+ document.getElementById('name').value+" "+document.getElementById('surname').value);
+	{
+	var name=document.getElementById("name");
+if (name.value.length==0 || name.value==" ")
+{alert("Wrong name"); name.focus();
+ name.style.backgroundColor='#e35152';
+ return false;
+} else name.style.backgroundColor='#ccffcc';
+; }
+{
+	var name=document.getElementById("surname");
+if (surname.value.length==0 || surname.value==" ")
+{alert("Wrong surname"); surname.focus();
+ name.style.backgroundColor='#e35152';
+ return false;
+} else name.style.backgroundColor='#ccffcc'; }
+
+ {
+var mymail=document.getElementById("email");
+var atposition=mymail.value.indexOf("@");
+var dotposition=mymail.value.lastIndexOf(".");
+ if (atposition<1 || dotposition<atposition+2 || dotposition+2>=mymail.length)
+ { alert("Wrong email");
+ mymail.focus();
+ mymail.style.backgroundColor='#e35152';
+ return false; } else
+ mymail.style.backgroundColor='#ccffcc'; }
+
+alert("Thanks for contacting with us"+ " "+document.getElementById('name').value+" "+document.getElementById('surname').value);
 } </script> 
 <body>
     <div id="page">
