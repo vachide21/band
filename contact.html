@@ -7,7 +7,11 @@
 <link rel="stylesheet" type="text/css" href="style.css" />
 <title>System Of A Down</title>
 </head>
+<script language="JavaScript">
 
+function display() {
+alert("Thanks for contacting with us "+ document.getElementById('name').value+" "+document.getElementById('surname').value);
+} </script> 
 <body>
     <div id="page">
 		
@@ -29,8 +33,16 @@
             </div>
             
            	<div class="main_body">
- <a href="http://freegifmaker.me/images/2feyU/"><img src="http://i.freegifmaker.me/1/5/5/7/7/8/1557782177139988.gif?1557782188" alt="gifs website"/></a><br/><a href="http://www.freegifmaker.me/">FreeGifMaker.me<a/>
-            </div>
+ First Name:
+<input name="name" id=name type="text">
+Last name:
+<input name="surname" id="surname" type="text"><br>
+Email:
+<input name="email" id="email" type="text"><br>
+Message:
+<textarea name="" cols="50" rows="10"></textarea>
+<input type="button" value="send" onClick="display();">
+          </div>
             
            	<div class="main_bottom"></div>
             
