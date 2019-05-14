@@ -36,6 +36,13 @@ var dotposition=mymail.value.lastIndexOf(".");
  mymail.style.backgroundColor='#e35152';
  return false; } else
  mymail.style.backgroundColor='#ccffcc'; }
+ 
+ var name=document.getElementById("message");
+if (message.value.length==0 || message.value==" ")
+{alert("Wrong message"); surname.focus();
+ name.style.backgroundColor='#e35152';
+ return false;
+} else name.style.backgroundColor='#ccffcc'; 
 
 alert("Thanks for contacting with us"+ " "+document.getElementById('name').value+" "+document.getElementById('surname').value);
 } </script> 
@@ -68,7 +75,7 @@ Email:
 <input name="email" id="email" type="text"><br>
 Message:<br>
 <div class="main_body">
-  <textarea name="textarea" cols="50" rows="10"></textarea>
+  <textarea name="message" id="message" type="text" cols="50" rows="10"></textarea>
 </div>
 <input type="button" value="send" onClick="display();">
 
