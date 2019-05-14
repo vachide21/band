@@ -1,5 +1,3 @@
-
-
 html, body {
 text-align: center;
 }
@@ -11,7 +9,11 @@ body {
 	background-image: url(img/guitar.jpg);
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	font-size: 17px;
+<<<<<<< HEAD
 	color: #00000;
+=======
+	color: #000000;
+>>>>>>> 5aa7f84fa5e64b77d74d95d1d1c0d8a2ee2f09ea
 }
 *
 {
@@ -168,4 +170,3 @@ color:#FFFFFF;
 text-decoration:none;
 color:#CCCCCC;
 }
-
