@@ -57,7 +57,17 @@ if(empty($_SESSION["shopping_cart"])) {
         </div>
 <div style="width:700px; margin:50 auto;">
 
-<h2>Merch</h2>   
+<h2>Merch</h2>  
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+<a href="shirt.html"><img src="img/info.jpg" alt="info" width="90" height="32"></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="cap.html"><img src="img/info.jpg" alt="info" width="90" height="32"></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a href="cd.html"><img src="img/info.jpg" alt="info" width="90" height="32"></a>
+</p> 
 
 <?php
 if(!empty($_SESSION["shopping_cart"])) {
@@ -77,7 +87,9 @@ while($row = mysqli_fetch_assoc($result)){
 			  <div class='image'><img src='".$row['image']."' /></div>
 			  <div class='name'>".$row['name']."</div>
 		   	  <div class='price'>$".$row['price']."</div>
+			  
 			  <button type='submit' class='buy'>Buy Now</button>
+
 			  </form>
 		   	  </div>";
         } 
