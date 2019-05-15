@@ -7,7 +7,32 @@
 <link rel="stylesheet" type="text/css" href="style.css" />
 <title>System Of A Down</title>
 </head>
-<script language="JavaScript">
+
+<script>
+function changeC(x) {
+  x.style.background = "yellow";
+}
+</script>
+
+<script>
+
+function UpperFN() {
+  var x = document.getElementById("name");
+  
+  x.value = x.value.toUpperCase();
+}
+</script>
+
+<script>
+
+function UpperSN() {
+  var x = document.getElementById("surname");
+  
+  x.value = x.value.toUpperCase();
+}
+</script>
+
+<script>
 
 function display() {
 	{
@@ -36,8 +61,17 @@ var dotposition=mymail.value.lastIndexOf(".");
  mymail.style.backgroundColor='#e35152';
  return false; } else
  mymail.style.backgroundColor='#ccffcc'; }
+ 
+ {
+ var message=document.getElementById("message");
+if (message.value.length==0 || message.value==" ")
+{alert("Messagebox is empty"); message.focus();
+ message.style.backgroundColor='#e35152';
+ return false;
+} else message.style.backgroundColor='#ccffcc';
+; }
 
-alert("Thanks for contacting with us"+ " "+document.getElementById('name').value+" "+document.getElementById('surname').value);
+alert("THANKS FOR CONTACTING US"+ " "+document.getElementById('name').value+" "+document.getElementById('surname').value);
 } </script> 
 <body>
     <div id="page">
@@ -61,14 +95,14 @@ alert("Thanks for contacting with us"+ " "+document.getElementById('name').value
             
            	<div class="main_body">
  First Name:
-<input name="name" id=name type="text">
+<input name="name" id="name" type="text" onBlur="UpperFN()">
 Last name:
-<input name="surname" id="surname" type="text"><br>
+<input name="surname" id="surname" type="text" onBlur="UpperSN()"><br>
 Email:
-<input name="email" id="email" type="text"><br>
+<input name="email" id="email" type="text" onfocus="changeC(this)"><br>
 Message:<br>
 <div class="main_body">
-  <textarea name="textarea" cols="50" rows="10"></textarea>
+  <textarea name="message" id="message" cols="50" rows="10"></textarea>
 </div>
 <input type="button" value="send" onClick="display();">
 
