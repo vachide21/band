@@ -189,15 +189,14 @@ color:#CCCCCC;
 }
 .product_wrapper .buy:hover {
 	background: #f17e0a;
-	border-color: #FF0000;
+	border-color: #FFFFFF;
 }
 .message_box .box{
 	margin: 10px 0px;
-    border: 1px solid #2b772e;
-    text-align: center;
-    font-weight: bold;
-    color: #2b772e;
-		
+	border: 1px solid #2b772e;
+	text-align: center;
+	font-weight: bold;
+	color: #FFFFFF;
 	}
 .table td {
 	border-bottom: #F0F0F0 1px solid;
@@ -211,8 +210,7 @@ color:#CCCCCC;
 		
 	}
 .cart_div a {
-	color:#000;
-		
+	color: #FFFFFF;		
 	}	
 .cart_div span {
 	font-size: 12px;
@@ -230,11 +228,11 @@ color:#CCCCCC;
     text-align: center;
 	}
 .cart .remove {
-    background: none;
-    border: none;
-    color: #0067ab;
-    cursor: pointer;
-    padding: 0px;
+	background: none;
+	border: none;
+	color: #FFFFFF;
+	cursor: pointer;
+	padding: 0px;
 	}
 .cart .remove:hover {
 	text-decoration:underline;
