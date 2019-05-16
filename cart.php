@@ -31,6 +31,10 @@ if (isset($_POST['action']) && $_POST['action']=="change"){
 <title>Shopping cart</title>
 <link rel='stylesheet' href='style2.css' type='text/css' media='all' />
 </head>
+<script>
+function alert1() {
+	alert("thank you for buying our merch");
+} </script>
 <body>
 <div id="page">
 		
@@ -135,7 +139,7 @@ $total_price += ($product["price"]*$product["quantity"]);
 
        	  </div>
            	<div class="main_bottom"></div>
-            
+                       &nbsp;&nbsp;&nbsp;&nbsp;<input type="button" value="Buy Now" onClick="alert1()">
         </div>
         
         
