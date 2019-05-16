@@ -27,7 +27,7 @@ if (isset($_POST['action']) && $_POST['action']=="change"){
 }
 ?>
 <html>
-<head>
+<head><link rel="shortcut icon"  href="favicon.png" />
 <title>Shopping cart</title>
 <link rel='stylesheet' href='style2.css' type='text/css' media='all' />
 </head>

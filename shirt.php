@@ -40,7 +40,7 @@ if(empty($_SESSION["shopping_cart"])) {
 
 
 <html>
-<head>
+<head><link rel="shortcut icon"  href="favicon.png" />
 <link rel="stylesheet" type="text/css" href="style.css" />
 <title>System Of A Down</title>
 </head>

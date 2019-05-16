@@ -38,7 +38,7 @@ if(empty($_SESSION["shopping_cart"])) {
 }
 ?>
 <html>
-<head>
+<head><link rel="shortcut icon"  href="favicon.png" />
 <title>Merch</title>
 <link rel='stylesheet' href='style2.css' type='text/css' media='all' />
 </head>
