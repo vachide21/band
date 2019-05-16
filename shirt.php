@@ -37,13 +37,17 @@ if(empty($_SESSION["shopping_cart"])) {
 	}
 }
 ?>
+
+
 <html>
 <head>
-<title>Merch</title>
-<link rel='stylesheet' href='style2.css' type='text/css' media='all' />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>System Of A Down</title>
 </head>
+
 <body>
-<div id="page">
+
+    <div id="page">
 		
         <div id="header">
         	<h1>System Of A Down</h1>
@@ -55,21 +59,95 @@ if(empty($_SESSION["shopping_cart"])) {
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
-<div style="width:700px; margin:50 auto;">
+  
+        <div id="main">
+        
+        	<div class="main_top">
 
-<h2>Merch</h2>  
+            
+            	
+
+            	<h1>System of a Down shirt.</h1>
+                 
+                
+                
+
+            </div>
+            
+           	<div class="main_body">
+            
+            <p>
+            <img name="shirt.jpg" src="img/shirt.jpg" width="400" height="250" alt="System of a Down" style="float:left">
+</p>
+
 <p>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
-<a href="shirt.php"><img src="img/info.jpg" alt="info" width="90" height="32"></a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="cap.php"><img src="img/info.jpg" alt="info" width="90" height="32"></a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The Radiation T-Shirt is a new item, exclusive to the store. 
 
-<a href="cd.php"><img src="img/info.jpg" alt="info" width="90" height="32"></a>
-</p> 
+A part of the 20th Anniversary T-Shirt Collection, this item stands out with a vibrant red hand and subtle distressing along the neckline, sleeve hem and hip. 
 
-<?php
+The tee is 100% cotton and garment dyed, so wash separately for longer lasting pigments. 
+
+
+
+Size
+
+Chest
+
+Waist
+
+Hip
+
+S
+
+35-37"
+
+28-30"
+
+28-30"
+
+M
+
+38-40"
+
+31-33"
+
+31-33"
+
+L
+
+41-43"
+
+34-36"
+
+34-36"
+
+XL
+
+44-46"
+
+37-39"
+
+37-39"
+
+2X
+
+47-48"
+
+40-42"
+
+40-42"
+
+3X
+
+49-50"
+
+43-45"
+
+43-45"
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+ <?php
 if(!empty($_SESSION["shopping_cart"])) {
 $cart_count = count(array_keys($_SESSION["shopping_cart"]));
 ?>
@@ -78,13 +156,12 @@ $cart_count = count(array_keys($_SESSION["shopping_cart"]));
 </div>
 <?php
 }
+$result = mysqli_query($con,"SELECT * FROM `products` WHERE `code`='001'");
+$row = mysqli_fetch_assoc($result);
 
-$result = mysqli_query($con,"SELECT * FROM `products`");
-while($row = mysqli_fetch_assoc($result)){
 		echo "<div class='product_wrapper'>
 			  <form method='post' action=''>
 			  <input type='hidden' name='code' value=".$row['code']." />
-			  <div class='image'><img src='".$row['image']."' /></div>
 			  <div class='name'>".$row['name']."</div>
 		   	  <div class='price'>$".$row['price']."</div>
 			  
@@ -92,7 +169,7 @@ while($row = mysqli_fetch_assoc($result)){
 
 			  </form>
 		   	  </div>";
-        } 
+        
 mysqli_close($con);
 ?>
 
@@ -100,15 +177,9 @@ mysqli_close($con);
 
 <div class="message_box" style="margin:10px 0px;">
 <?php echo $status; ?>
-</div>
-
-<br /><br />
-<a href=><strong></strong></a> <br /><br />
-</a>
-</div>
-</div>
-
-       	  </div>
+</p>
+            </div>
+            
            	<div class="main_bottom"></div>
             
         </div>
@@ -116,11 +187,9 @@ mysqli_close($con);
         
         
         <div id="footer">
-      
+       
         </div>
         
         </div>
-</body>
-</html>
 </body>
 </html>

@@ -37,13 +37,16 @@ if(empty($_SESSION["shopping_cart"])) {
 	}
 }
 ?>
+
 <html>
 <head>
-<title>Merch</title>
-<link rel='stylesheet' href='style2.css' type='text/css' media='all' />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>System Of A Down</title>
 </head>
+
 <body>
-<div id="page">
+    <div id="page">
 		
         <div id="header">
         	<h1>System Of A Down</h1>
@@ -55,21 +58,32 @@ if(empty($_SESSION["shopping_cart"])) {
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
-<div style="width:700px; margin:50 auto;">
+  
+        <div id="main">
+        
+        	<div class="main_top">
 
-<h2>Merch</h2>  
-<p>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
-<a href="shirt.php"><img src="img/info.jpg" alt="info" width="90" height="32"></a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="cap.php"><img src="img/info.jpg" alt="info" width="90" height="32"></a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
+            	
 
-<a href="cd.php"><img src="img/info.jpg" alt="info" width="90" height="32"></a>
-</p> 
+            	<h1>System of a down cap</h1>
+                 
+                
+                
 
-<?php
+            </div>
+            
+           	<div class="main_body"> 
+            
+            <p><img name="soad.png" src="img/cap.jpg" width="409" height="232" alt="System of a Down Cap" style="float:left" >    </p>
+               <p>
+           <p>   A new item for the band’s run of shows in the fall of 2018.  An SOAD logo is stitched on the outside of the cuff. Get your very own SOAD cap and represent your  favourite band.    </p>
+
+             Size: Fits-all one size.
+             Availiable in color black.
+               <br><br><br><br><br> <br> <br> <br><br><br>
+              
+              <?php
 if(!empty($_SESSION["shopping_cart"])) {
 $cart_count = count(array_keys($_SESSION["shopping_cart"]));
 ?>
@@ -78,13 +92,12 @@ $cart_count = count(array_keys($_SESSION["shopping_cart"]));
 </div>
 <?php
 }
+$result = mysqli_query($con,"SELECT * FROM `products` WHERE `code`='002'");
+$row = mysqli_fetch_assoc($result);
 
-$result = mysqli_query($con,"SELECT * FROM `products`");
-while($row = mysqli_fetch_assoc($result)){
 		echo "<div class='product_wrapper'>
 			  <form method='post' action=''>
 			  <input type='hidden' name='code' value=".$row['code']." />
-			  <div class='image'><img src='".$row['image']."' /></div>
 			  <div class='name'>".$row['name']."</div>
 		   	  <div class='price'>$".$row['price']."</div>
 			  
@@ -92,7 +105,7 @@ while($row = mysqli_fetch_assoc($result)){
 
 			  </form>
 		   	  </div>";
-        } 
+        
 mysqli_close($con);
 ?>
 
@@ -101,14 +114,11 @@ mysqli_close($con);
 <div class="message_box" style="margin:10px 0px;">
 <?php echo $status; ?>
 </div>
-
-<br /><br />
-<a href=><strong></strong></a> <br /><br />
-</a>
-</div>
-</div>
-
-       	  </div>
+              
+               
+                  </p>
+            </div>
+            
            	<div class="main_bottom"></div>
             
         </div>
@@ -116,11 +126,9 @@ mysqli_close($con);
         
         
         <div id="footer">
-      
+       
         </div>
         
         </div>
-</body>
-</html>
 </body>
 </html>

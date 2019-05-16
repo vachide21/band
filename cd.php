@@ -37,39 +37,53 @@ if(empty($_SESSION["shopping_cart"])) {
 	}
 }
 ?>
+
+
 <html>
 <head>
-<title>Merch</title>
-<link rel='stylesheet' href='style2.css' type='text/css' media='all' />
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>System Of A Down</title>
 </head>
+
 <body>
-<div id="page">
+    <div id="page">
 		
         <div id="header">
         	<h1>System Of A Down</h1>
             <ul>
-           	  <li><a href="index.html">Home</a></li>
+           	 <li><a href="index.html">Home</a></li>
                	<li><a href="about.html">About</a></li>
                 <li><a href="tours.html">Tours</a></li>
                 <li><a href="shop.php">Shop</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
-<div style="width:700px; margin:50 auto;">
+  
+        <div id="main">
+        
+        	<div class="main_top">
 
-<h2>Merch</h2>  
-<p>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
-<a href="shirt.php"><img src="img/info.jpg" alt="info" width="90" height="32"></a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="cap.php"><img src="img/info.jpg" alt="info" width="90" height="32"></a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
+            	
 
-<a href="cd.php"><img src="img/info.jpg" alt="info" width="90" height="32"></a>
-</p> 
+            	<h1>About the band...</h1>
+                 
+                
+                
 
-<?php
+            </div>
+            
+           	<div class="main_body">
+            
+            <p>
+            <img name="soad.png" src="img/cd.png" width="350" height="250" alt="System of a Down CD" style="float:left" >
+</p>
+Steal This Album! is the third studio album by Armenian-American heavy metal band System of a Down, released on November 26, 2002 by American Recordings and Columbia Records. Produced by Rick Rubin and Daron Malakian, the album peaked at number 15 on the US Billboard 200.
+  <p>
+  
+  <br><br><br><br><br><br><br><br><br><br><br><br>
+   <?php
 if(!empty($_SESSION["shopping_cart"])) {
 $cart_count = count(array_keys($_SESSION["shopping_cart"]));
 ?>
@@ -78,13 +92,12 @@ $cart_count = count(array_keys($_SESSION["shopping_cart"]));
 </div>
 <?php
 }
+$result = mysqli_query($con,"SELECT * FROM `products` WHERE `code`='003'");
+$row = mysqli_fetch_assoc($result);
 
-$result = mysqli_query($con,"SELECT * FROM `products`");
-while($row = mysqli_fetch_assoc($result)){
 		echo "<div class='product_wrapper'>
 			  <form method='post' action=''>
 			  <input type='hidden' name='code' value=".$row['code']." />
-			  <div class='image'><img src='".$row['image']."' /></div>
 			  <div class='name'>".$row['name']."</div>
 		   	  <div class='price'>$".$row['price']."</div>
 			  
@@ -92,7 +105,7 @@ while($row = mysqli_fetch_assoc($result)){
 
 			  </form>
 		   	  </div>";
-        } 
+        
 mysqli_close($con);
 ?>
 
@@ -101,14 +114,9 @@ mysqli_close($con);
 <div class="message_box" style="margin:10px 0px;">
 <?php echo $status; ?>
 </div>
-
-<br /><br />
-<a href=><strong></strong></a> <br /><br />
-</a>
-</div>
-</div>
-
-       	  </div>
+  </p>
+            </div>
+            
            	<div class="main_bottom"></div>
             
         </div>
@@ -116,11 +124,9 @@ mysqli_close($con);
         
         
         <div id="footer">
-      
+       
         </div>
         
         </div>
-</body>
-</html>
 </body>
 </html>
